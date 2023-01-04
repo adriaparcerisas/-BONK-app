@@ -83,8 +83,8 @@ df.info()
 
 import altair as alt
 base=alt.Chart(df).encode(x=alt.X('date:O', axis=alt.Axis(labelAngle=325)))
-line=base.mark_line(color='orange').encode(y=alt.Y('BONK_price:Q', axis=alt.Axis(grid=True)))
-bar=base.mark_line(color='purple',opacity=0.5).encode(y='SOL_price:Q')
+line=base.mark_line(color='orange').encode(y=alt.Y('bonk_price:Q', axis=alt.Axis(grid=True)))
+bar=base.mark_line(color='purple',opacity=0.5).encode(y='sol_price:Q')
 
 st.altair_chart((bar + line).resolve_scale(y='independent').properties(title='Daily $BONK vs $SOL price evolution',width=600))
 
@@ -185,7 +185,7 @@ df2.info()
 # In[17]:
 
 
-fig3 = px.area(df, x="date", y="n_tokens", color="from_label_type", color_discrete_sequence=px.colors.qualitative.Plotly)
+fig3 = px.bar(df, x="date", y="n_tokens", color="from_label_type", color_discrete_sequence=px.colors.qualitative.Plotly)
 fig3.update_layout(
     title='Daily $BONK tokens transferred from each sector',
     xaxis_tickfont_size=14,
@@ -201,7 +201,7 @@ fig3.update_layout(
 )
 
 
-fig4 = px.area(df, x="date", y="n_tokens", color="to_label_type", color_discrete_sequence=px.colors.qualitative.Plotly)
+fig4 = px.bar(df, x="date", y="n_tokens", color="to_label_type", color_discrete_sequence=px.colors.qualitative.Plotly)
 fig4.update_layout(
     title='Daily $BONK tokens transferred to each sector',
     xaxis_tickfont_size=14,
@@ -224,7 +224,7 @@ col2.plotly_chart(fig4, theme="streamlit", use_container_width=True)
 # In[18]:
 
 
-fig3 = px.area(df, x="date", y="n_tokens", color="from_label", color_discrete_sequence=px.colors.qualitative.Plotly)
+fig3 = px.bar(df, x="date", y="n_tokens", color="from_label", color_discrete_sequence=px.colors.qualitative.Plotly)
 fig3.update_layout(
     title='Daily $BONK tokens transferred from each platform',
     xaxis_tickfont_size=14,
@@ -240,7 +240,7 @@ fig3.update_layout(
 )
 
 
-fig4 = px.area(df, x="date", y="n_tokens", color="to_label", color_discrete_sequence=px.colors.qualitative.Plotly)
+fig4 = px.bar(df, x="date", y="n_tokens", color="to_label", color_discrete_sequence=px.colors.qualitative.Plotly)
 fig4.update_layout(
     title='Daily $BONK tokens transferred to each platform',
     xaxis_tickfont_size=14,
@@ -403,7 +403,7 @@ df2.info()
 
 
 import altair as alt
-base=alt.Chart(df).encode(x=alt.X('date:O', axis=alt.Axis(labelAngle=325)))
+base=alt.Chart(df).encode(x=alt.X('dates:O', axis=alt.Axis(labelAngle=325)))
 line=base.mark_line(color='black').encode(y=alt.Y('netflow:Q', axis=alt.Axis(grid=True)))
 bar=base.mark_bar(color='red',opacity=0.5).encode(y='amount_outs:Q')
 bar2=base.mark_bar(color='green',opacity=0.5).encode(y='amount_ins:Q')
@@ -461,8 +461,8 @@ fig3.update_layout(
 col1,col2,col3=st.columns(3)
 with col1:
     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
-st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
-st.plotly_chart(fig3, theme="streamlit", use_container_width=True)
+col2.plotly_chart(fig2, theme="streamlit", use_container_width=True)
+col3.plotly_chart(fig3, theme="streamlit", use_container_width=True)
 
 
 # In[ ]:
