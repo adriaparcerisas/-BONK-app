@@ -26,7 +26,7 @@ st.title('$BONK movements')
 # In[28]:
 
 
-st.markdown('A good way to track where token supply is going on is by analysing some transfers movements and analyzing its flows. For this reason, this final part tracks all about the $BONK transfers. The main metrics to be analyzedd are: ')
+st.markdown('A good way to track where token supply is going on is by analysing some transfers movements and analyzing its flows. For this reason, this final part tracks all about the $BONK transfers. The main metrics to be analyzed are: ')
 st.markdown('BONK price performance vs $SOL')
 st.markdown('BONK flows')
 st.markdown('BONK transfers')
