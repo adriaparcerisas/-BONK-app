@@ -30,7 +30,7 @@ st.markdown("**$BONK** is the very first Dog-themed memecoin on **Solana** thatâ
 st.markdown('As the documentation says, _The BONK contributors were tired of toxic Alameda tokenomics and wanted to make a fun memecoin where everyone gets a fair shot_.')
 st.markdown("A keep-in-mind particularity is that 50% of the total supply of the cryptocurrency was airdropped to the Solana community, while the main purpose of the team behind it is to bring back liquidity to decentralized exchanges built on Solana.")
 st.write("")
-st.markdown("This dashboard represents a **$BONK activity overview** in general trends. It is intended to provide an overview of the current $BONK situation and its impact on the main Solana ecosystem.")
+st.markdown("This dashboard represents a **BONK activity overview** in general trends. It is intended to provide an overview of the current $BONK situation and its impact on the main Solana ecosystem.")
 
 
 # In[7]:
