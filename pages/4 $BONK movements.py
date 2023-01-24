@@ -73,6 +73,7 @@ from table1 t1 join table2 t2 on t1.day = t2.day
 
 
 st.experimental_memo(ttl=21600)
+@st.cache
 def compute(a):
     data=sdk.query(a)
     return data
