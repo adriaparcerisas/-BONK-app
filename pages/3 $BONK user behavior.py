@@ -226,6 +226,7 @@ group by 1 order by 1 asc
 
 
 st.experimental_memo(ttl=21600)
+@st.cache
 def compute(a):
     data=sdk.query(a)
     return data
